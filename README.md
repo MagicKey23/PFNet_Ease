@@ -5,10 +5,23 @@
 <div align="center">
 <figure>
     <a href="./">
-        <img src="./imgs/camouflaged_sample.jpg" width="79%"/>
+        <img src="./img/img4_original.png" width="79%"/>
     </a>
     <div class = "text-align:center">
-    <figcaption>Figure 1 - Camouflaged contained human head example</figcaption>
+    <figcaption>Figure 1 - Camouflaged with a pyramid</figcaption>
+    </div>
+</figure>
+
+</div>
+
+
+<div align="center">
+<figure>
+    <a href="./">
+        <img src="./img/img4_GT.png" width="79%"/>
+    </a>
+    <div class = "text-align:center">
+    <figcaption>Figure 2 - Ground Truth</figcaption>
     </div>
 </figure>
 
