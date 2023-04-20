@@ -1,7 +1,7 @@
 # PFNet_Plus Camouflaged Object Detection
 > **Authors:** 
 > [Kaney Nguyen](https://github.com/MagicKey23/) &
-> [Martin Navarrete]() 
+> [Martin Navarrete](https://github.com/mnavarrete12) 
 <div align="center">
 <figure>
     <a href="./">
