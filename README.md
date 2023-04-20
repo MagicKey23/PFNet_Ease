@@ -5,7 +5,7 @@
 <div align="center">
 <figure>
     <a href="./">
-        <img src="./img/img4_original.png" width="79%"/>
+        <img src="./img/img22.png" width="79%"/>
     </a>
     <div class = "text-align:center">
     <figcaption>Figure 1 - Camouflaged with a pyramid</figcaption>
@@ -18,7 +18,7 @@
 <div align="center">
 <figure>
     <a href="./">
-        <img src="./img/img4_GT.png" width="79%"/>
+        <img src="./img/img22_GT.png" width="79%"/>
     </a>
     <div class = "text-align:center">
     <figcaption>Figure 2 - Ground Truth</figcaption>
@@ -77,7 +77,33 @@ Currently, refactoring the code
 
 ``` shell
 python test.py # update soon
+
+Test log example:
+
+test1's average Time Is: 0.053 s
+test1's average Time Is: 19.0 fps
+True positive: 65.0%
+True negative: 0.0%
+False positive: 35.0%
+False negative: 0.0%
+Accuracy: 65.0%
+Calculate Mask Area Accuracy...
+The average accuracy for contour area is: 82.99%
+Total Testing Time: 0:01:16
+
+
 ```
+
+<div align="center">
+<figure>
+    <a href="./">
+        <img src="./img/img22_output_mask.png" width="79%"/>
+    </a>
+    <div class = "text-align:center">
+    <figcaption>Figure 3 - Result Mask</figcaption>
+    </div>
+</figure>
+</div>
 
 ## Training
 
@@ -88,7 +114,7 @@ Data preparation
 ``` shell
 python train.py # update soon
 
-Training Log:
+Training Log Example:
   warnings.warn(_create_warning_msg(
 Namespace(img_size=704, batch_size=8, epochs=100, last_epoch=0, lr=0.001, optimizer='SGD', weight_decay=0.0005, snap_shot='', lr_decay=0.9, momentum=0.9, poly_train=True, save_point=[1, 10, 20, 30, 40, 50], device=0, train_path='Train/custom_camo', dataset_path='./data', exp_name='custom_camo', ckpt_path='./ckpt', test_path='./test/Train_Mix', load_weight='./best.pth', frame_scale=100, load_video='videoname.mp4', select_camera=0, multi_gpu=True, num_workers=16)
 {'epoch_num': 100, 'train_batch_size': 8, 'last_epoch': 0, 'lr': 0.001, 'lr_decay': 0.9, 'weight_decay': 0.0005, 'momentum': 0.9, 'snapshot': '', 'scale': 704, 'save_point': [1, 10, 20, 30, 40, 50], 'poly_train': True, 'optimizer': 'SGD'}
@@ -202,6 +228,18 @@ On image:
 ``` shell
 python inference.py
 ```
+
+<div align="center">
+<figure>
+    <a href="./">
+        <img src="./img/img22_output_img.png" width="79%"/>
+    </a>
+    <div class = "text-align:center">
+    <figcaption>Figure 3 - Result</figcaption>
+    </div>
+</figure>
+</div>
+
 
 
 ## Citation
