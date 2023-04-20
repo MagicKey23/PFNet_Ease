@@ -90,7 +90,7 @@ python train.py # update soon
 ```
 
 
-## Transfer learning
+## Help
 
 ``` shell
 
