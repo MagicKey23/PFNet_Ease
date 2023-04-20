@@ -124,42 +124,14 @@ python inference.py
 ## Citation
 
 ```
-@article{wang2022yolov7,
-  title={{YOLOv7}: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors},
-  author={Wang, Chien-Yao and Bochkovskiy, Alexey and Liao, Hong-Yuan Mark},
-  journal={arXiv preprint arXiv:2207.02696},
-  year={2022}
+@InProceedings{Mei_2021_CVPR,
+    author    = {Mei, Haiyang and Ji, Ge-Peng and Wei, Ziqi and Yang, Xin and Wei, Xiaopeng and Fan, Deng-Ping},
+    title     = {Camouflaged Object Segmentation With Distraction Mining},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {8772-8781}
 }
-```
-
-```
-@article{wang2022designing,
-  title={Designing Network Design Strategies Through Gradient Path Analysis},
-  author={Wang, Chien-Yao and Liao, Hong-Yuan Mark and Yeh, I-Hau},
-  journal={arXiv preprint arXiv:2211.04800},
-  year={2022}
-}
-```
-```
- 
-    @article{fan2021concealed,  
-     author={Fan, Deng-Ping and Ji, Ge-Peng and Cheng, Ming-Ming and Shao, Ling},  
-     title={Concealed Object Detection},   
-     journal={IEEE TPAMI}, 
-     year={2022},  
-     volume={44},  
-     number={10},  
-     pages={6024-6042},  
-     doi={10.1109/TPAMI.2021.3085766}
-    }
-    
-    @inproceedings{fan2020camouflaged,
-      title={Camouflaged object detection},
-      author={Fan, Deng-Ping and Ji, Ge-Peng and Sun, Guolei and Cheng, Ming-Ming and Shen, Jianbing and Shao, Ling},
-      booktitle={IEEE CVPR},
-      pages={2777--2787},
-      year={2020}
-    }
 ```
 
 
@@ -167,17 +139,8 @@ python inference.py
 
 <details><summary> <b>Expand</b> </summary>
 
-* [https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)
-* [https://github.com/WongKinYiu/yolor](https://github.com/WongKinYiu/yolor)
-* [https://github.com/WongKinYiu/PyTorch_YOLOv4](https://github.com/WongKinYiu/PyTorch_YOLOv4)
-* [https://github.com/WongKinYiu/ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4)
-* [https://github.com/Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)
-* [https://github.com/ultralytics/yolov3](https://github.com/ultralytics/yolov3)
-* [https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5)
-* [https://github.com/DingXiaoH/RepVGG](https://github.com/DingXiaoH/RepVGG)
-* [https://github.com/JUGGHM/OREPA_CVPR2022](https://github.com/JUGGHM/OREPA_CVPR2022)
-* [https://github.com/TexasInstruments/edgeai-yolov5/tree/yolo-pose](https://github.com/TexasInstruments/edgeai-yolov5/tree/yolo-pose)
-* [https://github.com/GewelsJI/SINet-V2](https://github.com/GewelsJI/SINet-V2)
+* [https://github.com/AlexeyAB/darknet](https://github.com/Mhaiyang/CVPR2021_PFNet)](https://github.com/AlexeyAB/darknet)](https://github.com/Mhaiyang/CVPR2021_PFNet)
+
 </details>
 
 ## License
