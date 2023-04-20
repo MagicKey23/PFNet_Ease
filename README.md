@@ -26,44 +26,16 @@
 ## File Structure
 
 <pre><code>
-Yolo-Sinet
-├── weights
-|   ├──YoloV7
-|   |  ├── best.pt
-|   ├──Sinet
-|   |  ├── best.pt
+PFNet_Plus
 ├── data
-│   ├── Custom_Data_Name
-│   │   ├── Train
-│   │   │   ├── images
-│   │   |   ├── gts
-│   │   │   ├── labels
-│   │   ├── Test
-│   │   │   ├── images
-│   │   │   ├── gts
-|   |   |   ├── labels
-│   |   |── Detect
-│   │   |   ├── images
-├── classification
-|   ├── Custom_Data_Name
-|   |   ├──found_object.txt
-|   |   ├──not_found.txt
-├── image_bbox
-|   ├── Custom_Data_Name
-|   |   ├── output_image_with_bbox.png
-├── masks   
-|   ├── Custom_Data_Name
-|   |   ├── output_masks.png
-├── test_output
-|   ├── Custom_Data_Name
-|   |   ├── test_output.png
-├── train_output
-|   ├── Custom_Data_Name
-|   |   ├── YoloV7
-|   |   |   ├── output.pt
-|   |   ├── Sinet
-|   |   |   ├── output.pt
-|   |   |   |
+│   |   |
+│   ├── Train
+│   │   ├── image
+│   │   ├── gts
+│   │   |
+│   ├── Test
+│   │   ├── image
+│   │   ├── gts
       .
       .
       .
