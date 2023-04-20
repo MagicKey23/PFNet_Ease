@@ -49,7 +49,7 @@ PFNet_Plus
 
 ``` shell
 # clone the git hub
-git clone yolo-sinet
+git clone PFNet_Plus
 # go to code folder
 cd yolo-net
 # apt install required packages
