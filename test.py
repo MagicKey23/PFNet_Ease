@@ -17,6 +17,7 @@ from config import *
 from misc import *
 from PFNet import PFNet
 import cv2
+
 from calculate_data import get_data
 from calculate_data import get_mask_area
 
@@ -27,7 +28,7 @@ torch.manual_seed(2021)
 device_ids = [0]
 torch.cuda.set_device(device_ids[0])
 
-opt = settings.getConfig()
+opt = settings.get_config()
 
 print(opt)
 

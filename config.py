@@ -3,7 +3,7 @@ import settings
 import urllib.request
 
 
-opt = settings.getConfig()
+opt = settings.get_config()
 
 #Kaney
 

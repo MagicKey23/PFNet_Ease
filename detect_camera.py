@@ -10,7 +10,7 @@ from torchvision import transforms
 from collections import OrderedDict
 from numpy import mean
 
-from settings import getConfig
+from settings import get_config
 from config import *
 from misc import *
 from PFNet import PFNet
@@ -20,7 +20,7 @@ import cv2
 #Martin I am using the platform module to check what OS the script is being ran on, then we can decide how to connect to a GPU
 currOS = platform.system()
 #Kaney Args Parameter
-opt = getConfig()
+opt = get_config()
 print(opt)
 
 

@@ -3,7 +3,7 @@
 import argparse
 import textwrap
 
-def getConfig():
+def get_config():
   
     #Format the args parser
     
