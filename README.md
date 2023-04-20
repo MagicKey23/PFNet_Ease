@@ -222,7 +222,7 @@ python inference.py
 
 <details><summary> <b>Expand</b> </summary>
 
-* [https://github.com/AlexeyAB/darknet](https://github.com/Mhaiyang/CVPR2021_PFNet)](https://github.com/AlexeyAB/darknet)](https://github.com/Mhaiyang/CVPR2021_PFNet)
+* [PF_NET](https://github.com/Mhaiyang/CVPR2021_PFNet)
 
 </details>
 
