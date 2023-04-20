@@ -64,7 +64,7 @@ PFNet_Plus
 # clone the git hub
 git clone PFNet_Plus
 # go to code folder
-cd yolo-net
+cd PFNet_Plus
 # apt install required packages
 pip install -r requirements
 ```
