@@ -87,12 +87,43 @@ Data preparation
 
 ``` shell
 python train.py # update soon
+
+Training Log:
+  warnings.warn(_create_warning_msg(
+Namespace(img_size=704, batch_size=8, epochs=100, last_epoch=0, lr=0.001, optimizer='SGD', weight_decay=0.0005, snap_shot='', lr_decay=0.9, momentum=0.9, poly_train=True, save_point=[1, 10, 20, 30, 40, 50], device=0, train_path='Train/custom_camo', dataset_path='./data', exp_name='custom_camo', ckpt_path='./ckpt', test_path='./test/Train_Mix', load_weight='./best.pth', frame_scale=100, load_video='videoname.mp4', select_camera=0, multi_gpu=True, num_workers=16)
+{'epoch_num': 100, 'train_batch_size': 8, 'last_epoch': 0, 'lr': 0.001, 'lr_decay': 0.9, 'weight_decay': 0.0005, 'momentum': 0.9, 'snapshot': '', 'scale': 704, 'save_point': [1, 10, 20, 30, 40, 50], 'poly_train': True, 'optimizer': 'SGD'}
+custom_camo
+From ./backbone/resnet/resnet50-19c8e357.pth Load resnet50 Weights Succeed!
+SGD
+Using 1 GPU(s) to Train.
+  0%|                                                   | 0/134 [00:00<?, ?it/s]/usr/local/lib/python3.9/dist-packages/torch/nn/_reduction.py:42: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+[  1], [   134], [0.000991], [8.68393], [1.17123], [1.08682], [1.07181], [1.0705
+[  2], [   268], [0.000982], [6.92324], [0.90088], [0.84093], [0.82352], [0.8836
+[  3], [   402], [0.000973], [5.81829], [0.79145], [0.73654], [0.71588], [0.7146
+[  4], [   536], [0.000964], [5.38071], [0.73253], [0.68674], [0.66433], [0.6582
+[  5], [   670], [0.000955], [5.15818], [0.69671], [0.66556], [0.63779], [0.6300
+[  6], [   804], [0.000946], [5.12762], [0.71141], [0.66046], [0.63120], [0.6233
+[  7], [   938], [0.000937], [5.01938], [0.68252], [0.65180], [0.61902], [0.6117
+[  8], [  1072], [0.000928], [4.96626], [0.67320], [0.64332], [0.61346], [0.6057
+[  9], [  1206], [0.000919], [4.92973], [0.66921], [0.63748], [0.60827], [0.6016
+[ 10], [  1340], [0.000910], [4.92222], [0.66695], [0.63663], [0.60796], [0.6006
+[ 11], [  1474], [0.000900], [4.89363], [0.66599], [0.63229], [0.60392], [0.5968
+[ 12], [  1608], [0.000891], [4.86323], [0.66102], [0.62732], [0.60032], [0.5935
+[ 13], [  1742], [0.000882], [4.84930], [0.65632], [0.62620], [0.59896], [0.5922
+[ 14], [  1876], [0.000873], [4.85351], [0.65462], [0.62585], [0.59979], [0.5933
+[ 15], [  2010], [0.000864], [4.81631], [0.65104], [0.62109], [0.59520], [0.5884
+[ 16], [  2144], [0.000855], [4.81192], [0.65121], [0.61958], [0.59446], [0.5880
+[ 17], [  2278], [0.000846], [4.79083], [0.64637], [0.61654], [0.59249], [0.5857
+[ 18], [  2412], [0.000836], [4.78060], [0.64511], [0.61487], [0.59132], [0.5845
 ```
 
 
 ## Help
 
 ``` shell
+python train.py --help
+
   -h, --help                           show this help message and exit
   --img_size IMG_SIZE                  The size of the input image. Adjust the
                                        train scale by specifying a value, for
