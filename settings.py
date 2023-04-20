@@ -23,7 +23,7 @@ def getConfig():
     parser.add_argument('--momentum', type=int, default=0.9, help='The momentum for optimizer during training. Default: %(default)s')
     parser.add_argument('--poly_train', type=bool, default=True, help='Set to True for polynomial decay learning rate during training. Default: %(default)s')
     parser.add_argument('--save_point', type=list, default=[1,10,20,30,40,50], help='Epochs at which to save the model weights. Enter as a list, for example: [1,10,20,30,40,50]. Default: %(default)s')
-    parser.add_argument('--train_path', type=str, default="train/Train_Mix", help='The path to the training data. Default: %(default)s ')
+    parser.add_argument('--train_path', type=str, default="train/", help='The path to the training data. Default: %(default)s ')
     parser.add_argument('--dataset_path', type=str, default="./data/", help='The path to the root of the dataset. Default: %(default)s')        
     parser.add_argument('--exp_name', type=str, default="test1", help='Set experiment name. Default: %(default)s')
     parser.add_argument('--project_name', type=str, default="project1", help='Set project name. Default: %(default)s')
@@ -31,7 +31,7 @@ def getConfig():
     parser.add_argument('--ckpt_path', type=str, default="./ckpt", help='The location where you want to save your training result. Default: %(default)s')
 
     # Test parameter settings
-    parser.add_argument('--test_path', type=str, default="test/Train_Mix", help='The path to the test data. Default: %(default)s')
+    parser.add_argument('--test_path', type=str, default="test/", help='The path to the test data. Default: %(default)s')
     parser.add_argument('--result_path', type=str, default="./results/", help='The path to the results. Default: %(default)s')
     parser.add_argument('--load_weight', type=str, default="./best.pth", help='The path to the pre-trained weight file. Enter in the format: Path + weight_name.pth. Default: %(default)s')
     parser.add_argument('--frame_scale', type=int, default="100", help='The percentage by which to upscale or downscale the camera capture. Default: %(default)s')
