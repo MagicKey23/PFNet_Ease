@@ -264,7 +264,7 @@ python inference.py
 }
 
 @Software{PFNet_Plus,
-    author    = {Kaney Nguyen, Navarrete},
+    author    = {Kaney Nguyen, Martin Navarrete},
     title     = {PFNet_Plus},
     webpage = {https://github.com/MagicKey23/PFNet_Plus/},
     month     = {April},
