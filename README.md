@@ -262,6 +262,15 @@ python inference.py
     year      = {2021},
     pages     = {8772-8781}
 }
+
+@Software{PFNet_Plus,
+    author    = {Kaney Nguyen, Navarrete},
+    title     = {PFNet_Plus},
+    webpage = {https://github.com/MagicKey23/PFNet_Plus/},
+    month     = {April},
+    year      = {2023}
+}
+
 ```
 
 
