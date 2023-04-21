@@ -43,12 +43,13 @@ PFNet_Plus
 ├── data
 │   |   |
 │   ├── Train
-│   │   ├── image
-│   │   ├── gts
-│   │   |
+|   |   ├── Project_Name
+│   │   |   ├── image
+│   │   |   ├── gts   
 │   ├── Test
-│   │   ├── image
-│   │   ├── gts
+|   |   ├── Project_Name
+│   │       ├── image
+│   │       ├── gts
       .
       .
       .
