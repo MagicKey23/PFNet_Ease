@@ -279,7 +279,7 @@ python inference.py
 
 <details><summary> <b>Expand</b> </summary>
 
-* [PF_NET](https://github.com/Mhaiyang/CVPR2021_PFNet)
+* [https://github.com/Mhaiyang/CVPR2021_PFNet](https://github.com/Mhaiyang/CVPR2021_PFNet)
 
 </details>
 
