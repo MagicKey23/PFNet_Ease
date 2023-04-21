@@ -48,8 +48,8 @@ PFNet_Plus
 │   │   |   ├── gts   
 │   ├── Test
 |   |   ├── Project_Name
-│   │       ├── image
-│   │       ├── gts
+│   │   |   ├── image
+│   │   |   ├── gts
       .
       .
       .
