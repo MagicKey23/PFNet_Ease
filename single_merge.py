@@ -6,9 +6,9 @@ import os
 def load_image():
         #Kaney
         #Load Contour
-        img = cv2.imread("") 
+        img = cv2.imread("img4.png") 
         #Load Original Image
-        original_img = cv2.imread("")
+        original_img = cv2.imread("img4.PNG")
         
         
         edges = cv2.Canny(img, 100,200)

@@ -17,7 +17,6 @@ from config import *
 from misc import *
 from PFNet import PFNet
 import cv2
-    
 from calculate_data import get_data
 from calculate_data import get_mask_area
 
@@ -25,13 +24,17 @@ from calculate_data import get_mask_area
 currOS = platform.system()
 
 torch.manual_seed(2021)
-device_ids = [0]
-torch.cuda.set_device(device_ids[0])
 
-opt = settings.get_config()
+
+opt = settings.getConfig()
 
 print(opt)
 
+device_ids = [opt.device]
+
+if currOS != 'Darwin':
+    torch.cuda.set_device(device_ids[0])
+    
 results_path = opt.result_path
 check_mkdir(results_path)
 project_name = opt.project_name
@@ -80,7 +83,8 @@ def main():
 
     net.load_state_dict(torch.load(opt.load_weight))
     print('Load {} succeed!'.format(opt.load_weight))
-
+    
+    
     net.eval()
     with torch.no_grad():
         start = time.time()
@@ -113,11 +117,14 @@ def main():
             #Total Img  
             total_img = len(img_list)
             
+            print("Saving Data At Checkpoint Folder...")
+            
             for idx, img_name in enumerate(img_list):
-        
+                
+              
                 #original_img = cv2.imread(os.path.join(image_path, img_name + '.png')) #Change to numpy load Kaney
                 
-                print(os.path.join(image_path, img_name[0] + img_name[1]))
+                #print(os.path.join(image_path, img_name[0] + img_name[1]))
                 
                 original_img = cv2.imread(os.path.join(image_path, img_name[0] + img_name[1]))
          
@@ -173,7 +180,7 @@ def main():
 
                 # Find contours of the edges / Martin
                 contours, ___ = cv2.findContours(result, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-                print("Number of target segmentation detect: " + str(len(contours)))
+                #print("Number of target segmentation detect: " + str(len(contours)))
                 
                 #Split string 
                 
@@ -187,7 +194,7 @@ def main():
                     if re.search(search_negative, img_name[0]) is None:
                         false_negative = false_negative + 1
                     else:
-                        true_negative = true_positive + 1
+                        true_negative = true_negative + 1
                 elif len(contours) > 1:
                     #Write False Positive
                     p.write(img_name[0] + '_false_positive' + img_name[1] + '\n') #Kaney  Adding this so it would count 2 more contour as false positive     

@@ -1,3 +1,13 @@
+"""
+ @Time    : 2021/7/6 10:56
+ @Author  : Haiyang Mei
+ @E-mail  : mhy666@mail.dlut.edu.cn
+ 
+ @Project : CVPR2021_PFNet
+ @File    : datasets.py
+ @Function: Datasets Processing
+ 
+"""
 import os
 import os.path
 import torch.utils.data as data

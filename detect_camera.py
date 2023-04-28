@@ -10,7 +10,7 @@ from torchvision import transforms
 from collections import OrderedDict
 from numpy import mean
 
-from settings import get_config
+from settings import getConfig
 from config import *
 from misc import *
 from PFNet import PFNet
@@ -20,13 +20,16 @@ import cv2
 #Martin I am using the platform module to check what OS the script is being ran on, then we can decide how to connect to a GPU
 currOS = platform.system()
 #Kaney Args Parameter
-opt = get_config()
+opt = getConfig()
 print(opt)
 
 
 torch.manual_seed(2021)
-device_ids = [0]
-torch.cuda.set_device(device_ids[0])
+
+device_ids = [opt.device]
+
+if currOS != 'Darwin':
+    torch.cuda.set_device(device_ids[0])
 
 args = {
     'scale': opt.img_size,

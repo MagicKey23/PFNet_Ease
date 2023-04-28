@@ -5,11 +5,11 @@ import cv2
 
 def get_data(TP, TN, FP, FN, Total):
     #Calculate The Data 
-    TP = round(TP/Total * 100, 0)
-    TN = round(TN/Total * 100, 0)
-    FP = round(FP/Total * 100, 0) 
-    FN = round(FN/Total * 100, 0) 
-    Accuracy = round((TP + TN), 0)
+    TP = round(TP/Total * 100, 1)
+    TN = round(TN/Total * 100, 1)
+    FP = round(FP/Total * 100, 1) 
+    FN = round(FN/Total * 100, 1) 
+    Accuracy = round((TP + TN), 1)
     
     print("True positive: " + str(TP) + "%")
     print("True negative: " + str(TN) + "%")
@@ -79,8 +79,12 @@ def get_mask_area(results_path, project_name, exp_name, test_path):
                         print("Error: Cannot divide by zero")
                 else:
                      try:
+                        
+                        
                         percentage = round((1-(area_output-gt_total_area)/gt_total_area) * 100, 2)
-                       
+                        if(percentage < 1):
+                            percentage = 0
+                               
                         mask_sum  +=  percentage
                      except ZeroDivisionError as e: 
                         print("Error: Cannot divide by zero")
