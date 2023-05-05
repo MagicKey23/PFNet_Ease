@@ -28,13 +28,20 @@
 </div>
 
 ## Introduction
-- Coming Soon
-## Video Demo
+- A camouflaged object refers to an item or entity that is intentionally designed, colored, or disguised to blend in with its surroundings, in order to conceal its presence or to make it difficult to be detected by visual observation. Camouflaged objects are often used in military, hunting, or wildlife photography contexts, where stealth or concealment is crucial. The object may be concealed using natural or artificial materials, such as foliage, paint, netting, or other materials, that are carefully chosen and arranged to match the texture, color, and pattern of the environment. The purpose of camouflaging an object is to make it blend in so well that it becomes nearly invisible, making it difficult to distinguish from the surrounding objects or landscape.
+## Video Demo.
 
 - Coming Soon
 
 ## Use Case
-- Coming Soon
+- Medical
+- Millitary 
+- Environmental
+
+## Supported OS
+- MacOS(M1/M2 Chipset)
+- Window
+- Linux
 
 ## File Structure
 
@@ -60,8 +67,13 @@ PFNet_Plus
 ## Installation
 
 
-
 ``` shell
+
+If you have trouble to install the pytorch use this code below:
+
+pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 -f
+https://download.pytorch.org/whl/torch_stable.html
+
 # clone the git hub
 git clone PFNet_Plus
 # go to code folder
@@ -75,8 +87,7 @@ pip install -r requirements
 
 ``` shell
 python train.py --help
-
-  -h, --help                           show this help message and exit
+ -h, --help                           show this help message and exit
   --img_size IMG_SIZE                  The size of the input image. Adjust the
                                        train scale by specifying a value, for
                                        example: 416, 704, or 1024. Default:
@@ -93,8 +104,7 @@ python train.py --help
                                        example: Adam. Default: SGD
   --weight_decay WEIGHT_DECAY          The weight decay for regularization
                                        during training. Default: 0.0005
-  --snap_shot SNAP_SHOT                A snapshot of the training model to
-                                       save. Leave blank if not needed.
+  --snap_shot SNAP_SHOT                Resume Training or Transfer Training
                                        Default:
   --lr_decay LR_DECAY                  The learning rate decay factor.
   --momentum MOMENTUM                  The momentum for optimizer during
@@ -107,7 +117,7 @@ python train.py --help
                                        [1,10,20,30,40,50]. Default: [1, 10,
                                        20, 30, 40, 50]
   --train_path TRAIN_PATH              The path to the training data. Default:
-                                       train/
+                                       train/custom
   --dataset_path DATASET_PATH          The path to the root of the dataset.
                                        Default: ./data/
   --exp_name EXP_NAME                  Set experiment name. Default: test1
@@ -115,7 +125,7 @@ python train.py --help
   --ckpt_path CKPT_PATH                The location where you want to save
                                        your training result. Default: ./ckpt
   --test_path TEST_PATH                The path to the test data. Default:
-                                       test/
+                                       test/custom
   --result_path RESULT_PATH            The path to the results. Default:
                                        ./results/
   --load_weight LOAD_WEIGHT            The path to the pre-trained weight
@@ -130,31 +140,44 @@ python train.py --help
   --select_camera SELECT_CAMERA        The index of the camera to use. Enter
                                        as an integer value from 0 to 4.
                                        Default: 0
-  --display_accuracy DISPLAY_ACCURACY  Display TP, TN, FP, NP, Accuracy. Note:
+  --display_accuracy DISPLAY_ACCURACY  Display TP, TN, FP, FN, Accuracy. Note:
                                        Required Proper Formatting to work.
                                        Default: False
   --display_area DISPLAY_AREA          Display area accuracy. Note: Required
                                        Proper Formatting to work. Default:
                                        False
-  --device DEVICE                      The index of the camera to use for
-                                       testing. For example: 0, 1, 2, or 3.
-                                       Default: 0
+  --device DEVICE                      The index of the GPU. For example: 0,
+                                       1, 2, or 3. Default: 0
   --save_video SAVE_VIDEO              Save result video Default: False
   --save_results SAVE_RESULTS          Save infer result Default: True
   --num_workers NUM_WORKERS            The number of worker threads to use.
                                        Default: 16
+
 
 ```
 
 
 ## Training
 
-Currently, refactoring the code 
-
-Data preparation
+Data preparation:
 
 ``` shell
-python train.py # update soon
+Prepare image with camouflaged and ground truth of the camouflage image:
+
+Create two folders:
+image and gts as the folder structure above
+```
+Example of camouflaged dataset:
+
+Download [Camouflaged Example](https://cove.thecvf.com/datasets/326)
+
+
+
+``` shell
+Example:
+
+python train.py --batch_size 8 --device 0 --exp_name
+"Pyramid" --epoch 100 --dataset_path ./data --train_path Pyramid --img_size 325
 
 Training Log Example:
   warnings.warn(_create_warning_msg(
@@ -187,6 +210,15 @@ Using 1 GPU(s) to Train.
 ```
 
 
+## Transfer Learning/Resume Training
+
+To Resume or transfer the learning. Simply type in the epoch number.
+```shell
+Example: Resume at epoch 1 aka 1.pth
+
+python train --snapshot 1 
+
+```
 
 
 
@@ -200,7 +232,12 @@ Using 1 GPU(s) to Train.
 Currently, refactoring the code
 
 ``` shell
-python test.py # update soon
+Example:
+
+python infer.py --load_weight ./best-k-1.pth --test_path
+New/test/k-1
+
+NOTE: You must have gts folder in test or it would crash
 
 Test log example:
 
@@ -232,11 +269,10 @@ Total Testing Time: 0:01:16
 
 ## Inference
 
-
-
 On image:
 ``` shell
-python inference.py
+python infer.py --load_weight ./best-k-1.pth --test_path
+New/test/k-1
 ```
 
 <div align="center">
@@ -250,7 +286,12 @@ python inference.py
 </figure>
 </div>
 
+## Camera and Video
 
+``` shell
+python detect_from_video.py --load_video video_path --load_weight weight_path 
+python detect_from_camera.py --load_weight weight_path --frame_scale 100
+```
 
 ## Citation
 
@@ -285,4 +326,8 @@ python inference.py
 
 ## License
 
-The source code is free for research and education use only.
+PFNET_PLUS is available under two different licenses:
+- **PFNET License**: See [LICENSE](https://github.com/Mhaiyang/CVPR2021_PFNet/blob/main/License.txt) file for details.
+- **MIT License**: Refer to License.txt, 
+
+
