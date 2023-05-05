@@ -333,6 +333,7 @@ python detect_from_camera.py --load_weight weight_path --frame_scale 100
 
 PFNET_PLUS is available under two different licenses:
 - **PFNET License**: See [LICENSE](https://github.com/Mhaiyang/CVPR2021_PFNet/blob/main/License.txt) file for details.
-- **MIT License**: Refer to License.txt, 
+- **MIT License**: Refer to License.txt 
+- The source code is free for research and education use only. Any commercial usage should get formal permission first.
 
 
