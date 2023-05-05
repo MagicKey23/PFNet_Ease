@@ -197,7 +197,7 @@ def main():
                     else:
                         true_negative = true_negative + 1
                 elif len(contours) > opt.number_actual_object:
-                    #Write False Positive   
+                    #Write False Positive
                     p.write(img_name[0] + '_false_positive' + img_name[1] + '\n') #Kaney  Adding this so it would count 2 more contour as false positive     
                     false_positive = false_positive + 1
                 else:

@@ -40,7 +40,7 @@ def getConfig():
     parser.add_argument('--display_accuracy', type=bool, default=False, help='Display TP, TN, FP, FN, Accuracy. Note: Required Proper Formatting to work. Default: %(default)s')
     parser.add_argument('--display_area', type=bool, default=False, help='Display area accuracy. Note: Required Proper Formatting to work. Default: %(default)s')
     parser.add_argument('--device', type=int, default=0, help='The index of the GPU. For example: 0, 1, 2, or 3. Default: %(default)s')
-    parser.add_argument('--number_actual_object', type=int, default=1, help='How many actual object is in the image')
+    parser.add_argument('--gt_object', type=int, default=1, help='How many actual object is in the image')
 
     parser.add_argument('--save_video', type=bool, default=False, help='Save result video Default: %(default)s')
     parser.add_argument('--save_results', type=bool, default=True, help='Save infer result Default: %(default)s')
