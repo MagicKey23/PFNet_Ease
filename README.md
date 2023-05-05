@@ -279,7 +279,7 @@ python infer.py --load_weight ./best-k-1.pth --test_path New/test/k-1
         <img src="./img/img22_output_img.png" width="79%"/>
     </a>
     <div class = "text-align:center">
-    <figcaption>Figure 3 - Result</figcaption>
+    <figcaption>Figure 4 - Result</figcaption>
     </div>
 </figure>
 </div>
