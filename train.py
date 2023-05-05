@@ -172,7 +172,7 @@ def main():
 
 def train(net, optimizer):
     curr_iter = 1
-    start_time = time.time()
+    start_time = time.time()    
 
     for epoch in range(args['last_epoch'] + 1, args['last_epoch'] + 1 + args['epoch_num']):
         loss_record, loss_1_record, loss_2_record, loss_3_record, loss_4_record = AvgMeter(), AvgMeter(), AvgMeter(), AvgMeter(), AvgMeter()
