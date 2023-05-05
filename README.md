@@ -235,9 +235,9 @@ Currently, refactoring the code
 Example:
 
 python infer.py --load_weight ./best-k-1.pth --test_path
-New/test/k-1
+New/test/k-1 --gt_object 1 
 
-NOTE: You must have gts folder in test or it would crash
+NOTE: You must have gts folder in test or it would crash. Change gt_object 2 if there are 2 objects in the ground truth.
 
 Test log example:
 
@@ -292,6 +292,11 @@ New/test/k-1
 python detect_from_video.py --load_video video_path --load_weight weight_path 
 python detect_from_camera.py --load_weight weight_path --frame_scale 100
 ```
+## In Development
+
+- A custom camouflaged background generator
+- A image generator to add different object along with ground truth object for train/test
+
 
 ## Citation
 
