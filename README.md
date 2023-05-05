@@ -177,8 +177,7 @@ Download [Camouflaged Example](https://cove.thecvf.com/datasets/326)
 ``` shell
 Example:
 
-python train.py --batch_size 8 --device 0 --exp_name
-"Pyramid" --epoch 100 --dataset_path ./data --train_path Pyramid --img_size 325
+python train.py --batch_size 8 --device 0 --exp_name "Pyramid" --epoch 100 --dataset_path ./data --train_path Pyramid --img_size 325
 
 Training Log Example:
   warnings.warn(_create_warning_msg(
@@ -235,8 +234,7 @@ Currently, refactoring the code
 ``` shell
 Example:
 
-python infer.py --load_weight ./best-k-1.pth --test_path
-New/test/k-1 --gt_object 1 
+python infer.py --load_weight ./best-k-1.pth --test_path New/test/k-1 --gt_object 1 
 
 NOTE: You must have gts folder in test or it would crash. Change gt_object 2 if there are 2 objects in the ground truth.
 
