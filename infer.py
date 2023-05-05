@@ -186,7 +186,8 @@ def main():
                 
                 search_negative = re.compile("negative", re.IGNORECASE)
                 
-                
+
+
                 if len(contours) == 0:
                     #Write Negative Image 
                     n.write(img_name[0] + img_name[1] + '\n')  
@@ -195,8 +196,8 @@ def main():
                         false_negative = false_negative + 1
                     else:
                         true_negative = true_negative + 1
-                elif len(contours) > 1:
-                    #Write False Positive
+                elif len(contours) > opt.number_actual_object:
+                    #Write False Positive   
                     p.write(img_name[0] + '_false_positive' + img_name[1] + '\n') #Kaney  Adding this so it would count 2 more contour as false positive     
                     false_positive = false_positive + 1
                 else:

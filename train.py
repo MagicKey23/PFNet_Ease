@@ -1,13 +1,4 @@
-    """
- @Time    : 2021/7/6 14:52
- @Author  : Haiyang Mei
- @E-mail  : mhy666@mail.dlut.edu.cn
- 
- @Project : CVPR2021_PFNet
- @File    : train.py
- @Function: Training
- 
-"""
+
 import datetime
 import time
 import os
@@ -61,7 +52,7 @@ args = {
     'lr_decay': opt.lr_decay,
     'weight_decay': opt.weight_decay,
     'momentum': opt.momentum,
-    'snapshot': '',
+    'snapshot': opt.snap_shot,
     'scale': opt.img_size,
     'save_point': opt.save_point,
     'poly_train': opt.poly_train,
@@ -172,7 +163,7 @@ def main():
 
 def train(net, optimizer):
     curr_iter = 1
-    start_time = time.time()    
+    start_time = time.time()
 
     for epoch in range(args['last_epoch'] + 1, args['last_epoch'] + 1 + args['epoch_num']):
         loss_record, loss_1_record, loss_2_record, loss_3_record, loss_4_record = AvgMeter(), AvgMeter(), AvgMeter(), AvgMeter(), AvgMeter()
