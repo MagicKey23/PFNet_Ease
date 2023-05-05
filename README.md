@@ -272,8 +272,7 @@ Total Testing Time: 0:01:16
 
 On image:
 ``` shell
-python infer.py --load_weight ./best-k-1.pth --test_path
-New/test/k-1
+python infer.py --load_weight ./best-k-1.pth --test_path New/test/k-1
 ```
 
 <div align="center">
