@@ -287,8 +287,8 @@ python infer.py --load_weight ./best-k-1.pth --test_path New/test/k-1
 ## Camera and Video
 
 ``` shell
-python detect_from_video.py --load_video video_path --load_weight weight_path 
-python detect_from_camera.py --load_weight weight_path --frame_scale 100
+python detect_video.py --load_video video_path --load_weight weight_path 
+python detect_camera.py --load_weight weight_path --frame_scale 100
 ```
 ## In Development
 
