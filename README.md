@@ -30,7 +30,7 @@
 ## Introduction
 - A camouflaged object refers to an item or entity that is intentionally designed, colored, or disguised to blend in with its surroundings, in order to conceal its presence or to make it difficult to be detected by visual observation. Camouflaged objects are often used in military, hunting, or wildlife photography contexts, where stealth or concealment is crucial. The object may be concealed using natural or artificial materials, such as foliage, paint, netting, or other materials, that are carefully chosen and arranged to match the texture, color, and pattern of the environment. The purpose of camouflaging an object is to make it blend in so well that it becomes nearly invisible, making it difficult to distinguish from the surrounding objects or landscape.
 - This software is intergrating with PFNET. For more info about the DNN, see [paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Mei_Camouflaged_Object_Segmentation_With_Distraction_Mining_CVPR_2021_paper.pdf)
-- The goal of this project is to introduce a method for making computer vision software easy to use and to standardize data benchmarking. Additionally, our software gives users the freedom to select their preferred method of working with datasets. Many software packages are disguised and lack documentation, making them difficult to use. Our tool enables users to navigate through the project seamlessly
+- The goal of this project is to make it easier for people to use computer vision software and compare data. With our software, users can choose how they want to work with their data. Many existing software programs are hard to use because they don't have clear instructions, but our tool is user-friendly and easy to navigate.
 ## Video Demo.
 
 - Coming Soon
