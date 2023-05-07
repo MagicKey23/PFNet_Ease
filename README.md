@@ -1,4 +1,4 @@
-# PFNet_Plus Camouflaged Object Detection
+# PFNet_Ease Camouflaged Object Detection
 > **Developers:** 
 > [Kaney Nguyen](https://github.com/MagicKey23/) &
 > [Martin Navarrete](https://github.com/mnavarrete12) 
@@ -30,6 +30,7 @@
 ## Introduction
 - A camouflaged object refers to an item or entity that is intentionally designed, colored, or disguised to blend in with its surroundings, in order to conceal its presence or to make it difficult to be detected by visual observation. Camouflaged objects are often used in military, hunting, or wildlife photography contexts, where stealth or concealment is crucial. The object may be concealed using natural or artificial materials, such as foliage, paint, netting, or other materials, that are carefully chosen and arranged to match the texture, color, and pattern of the environment. The purpose of camouflaging an object is to make it blend in so well that it becomes nearly invisible, making it difficult to distinguish from the surrounding objects or landscape.
 - This software is intergrating with PFNET. For more info about the DNN, see [paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Mei_Camouflaged_Object_Segmentation_With_Distraction_Mining_CVPR_2021_paper.pdf)
+- The goal of this project is to build a software that is easy to use. Many camouflaged object detection softwares lacks of end-user experience, and very difficult to use for average people.
 
 
 ## Video Demo.
@@ -49,7 +50,7 @@
 ## File Structure
 
 <pre><code>
-PFNet_Plus
+PFNet_Ease
 ├── data
 │   |   |
 │   ├── Train
@@ -78,9 +79,9 @@ pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 -f
 https://download.pytorch.org/whl/torch_stable.html
 
 # clone the git hub
-git clone PFNet_Plus
+git clone PFNet_Ease
 # go to code folder
-cd PFNet_Plus
+cd PFNet_Ease
 # apt install required packages
 pip install -r requirements
 ```
@@ -310,10 +311,10 @@ python detect_camera.py --load_weight weight_path --frame_scale 100
     pages     = {8772-8781}
 }
 
-@Software{PFNet_Plus,
+@Software{PFNet_Ease,
     author    = {Kaney Nguyen, Martin Navarrete},
-    title     = {PFNet_Plus},
-    webpage = {https://github.com/MagicKey23/PFNet_Plus/},
+    title     = {PFNet_Ease},
+    webpage = {https://github.com/MagicKey23/PFNet_Ease/},
     month     = {April},
     year      = {2023}
 }
@@ -331,7 +332,7 @@ python detect_camera.py --load_weight weight_path --frame_scale 100
 
 ## License
 
-PFNET_PLUS is available under two different licenses:
+PFNET_Ease is available under two different licenses:
 - **PFNET License**: See [LICENSE](https://github.com/Mhaiyang/CVPR2021_PFNet/blob/main/License.txt) file for details.
 - **MIT License**: Refer to License.txt 
 - The source code is free for research and education use only. Any commercial usage should get formal permission first.
