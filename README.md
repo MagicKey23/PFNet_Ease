@@ -38,7 +38,6 @@
 
 https://github.com/MagicKey23/PFNet_Ease/assets/22732906/bf9bba96-bb6d-4fad-8856-46eb4f9a8c27
 
-g Soon
 
 ## Use Case
 - Medical
