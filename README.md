@@ -234,7 +234,6 @@ python train --snapshot 1
 
 ## Testing
 
-Currently, refactoring the code
 
 ``` shell
 Example:
