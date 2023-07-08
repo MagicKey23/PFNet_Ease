@@ -77,8 +77,7 @@ PFNet_Ease
 
 If you have trouble to install the pytorch use this code below:
 
-pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 -f
-https://download.pytorch.org/whl/torch_stable.html
+pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 -f https://download.pytorch.org/whl/torch_stable.html
 
 # clone the git hub
 git clone PFNet_Ease
