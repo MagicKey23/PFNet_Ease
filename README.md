@@ -293,10 +293,9 @@ python infer.py --load_weight ./best-k-1.pth --test_path New/test/k-1
 python detect_video.py --load_video video_path --load_weight weight_path 
 python detect_camera.py --load_weight weight_path --frame_scale 100
 ```
-## In Development
+## Camouflaged Dataset Generator
 
-- A custom camouflaged background generator
-- A image generator to add different object along with ground truth object for train/test
+- [Camouflaged Dataset Generator](https://github.com/MagicKey23/camo_dataset_generator)
 
 
 ## Citation
